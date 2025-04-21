@@ -1,0 +1,131 @@
+<html>
+<body>
+<style>
+.nav-title
+{
+background-color:blue;
+color:white;
+
+}
+
+input
+{
+border-radius:40px;
+width:250px;
+height:45px;
+
+}
+
+.submit-button
+{
+border-radius:40px;
+width:150px;
+height:45px;
+}
+
+.spacing-gab
+{
+height="80px"
+}
+
+fieldset
+{
+height:400px;
+width:400px;
+}
+
+</style>
+
+
+<div class="nav-title"><h1>tri-cell</h1></div>
+<center>
+<div class="login-form">
+<form  method="post" onsubmit="return(validate())" name="myform" action="https://sheetdb.io/api/v1/31b5a9btt6vxl">
+
+<fieldset class="form-size-field">
+<legend>
+
+logn-in
+</legend>
+
+
+
+<input type="text" placeholder="user name" name="data[Name]" id="Name"><p></p>
+
+<div class="spacing-gab"></div>
+<input type="text" placeholder="password" name="data[user-password]" id="Password"><p></p>
+
+<div class="spacing-gab"></div>
+
+<input type="text" placeholder="employee id " name="data[employee-id]" id="Id"><p></p>
+<div class="spacing-gab"></div>
+
+<input type="submit" class="submit-button">
+
+</fieldset>
+</form>
+</div>
+
+</center>
+
+
+<script style="text/javascript">
+function validate()
+{
+
+if(document.getElementById("Name").value=="")
+{
+alert("please provide a name");
+document.myform.Name.focus();
+return false;
+}
+
+
+else if(document.getElementById("Password").value=="")
+{
+alert("please provide a Password");
+document.myform.Name.focus();
+return false;
+}
+
+else if(document.getElementById("Id").value=="")
+{
+alert("please provide a Id");
+document.myform.Name.focus();
+return false;
+
+}
+
+else{
+alert("login successful");
+}
+}
+
+
+var form= document.getElementById("sheetdb-form");
+form.addEventListener("submit", e =>{
+e.preventDefault();
+fetch(from.action,{
+method:"POST",
+body:new FormData(document.getElementById("sheetdb-form")),
+}).then(
+response => response.json()
+).then((html) =>{
+//you can put any js code here
+windows.open("tri cell.html","  _blank");
+});
+})
+
+ 
+
+window.loca.href="tri cell2.html";
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
